@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 export const IconWrapper = styled.div`
   position: absolute;
   right: 12px;
-  width: 30px;
+  width: 15px;
   color: ${theme.colors.sectionbgLighter};
 `
 

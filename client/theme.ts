@@ -5,6 +5,7 @@ const theme = {
     white: '#FFFFFF',
     black: '#000000',
     grey: '#AAAAAA',
+    lightGrey: '#B9C3CD',
     bg: '#141518',
     text: '#f1f4fa',
     sectionbg: 'rgba(255, 255, 255, 0.03)',

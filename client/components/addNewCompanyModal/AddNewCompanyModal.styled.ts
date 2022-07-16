@@ -55,9 +55,9 @@ export const Actions = styled.div`
 `
 
 export const CloseIconWrapper = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
 
-  color: ${theme.colors.sectionbgLighter};
+  color: ${theme.colors.lightGrey};
   cursor: pointer;
 `

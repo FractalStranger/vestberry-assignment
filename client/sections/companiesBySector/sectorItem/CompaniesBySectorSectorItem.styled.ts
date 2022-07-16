@@ -35,3 +35,7 @@ export const SLabel = styled.div`
   line-height: 18px;
   color: #aaaaaa;
 `
+
+export const SIcon = styled.div`
+  width: 55px;
+`
