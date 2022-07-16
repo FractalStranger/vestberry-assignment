@@ -10,6 +10,11 @@ export const Wrapper = styled.div`
 export const Header = styled.div`
   background-color: ${theme.colors.sectionbg};
   padding: 30px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 58px;
 `
 
 export const Headline = styled.div`
@@ -45,4 +50,14 @@ export const Actions = styled.div`
   justify-content: flex-end;
 
   gap: 10px;
+
+  margin-top: 73px;
+`
+
+export const CloseIconWrapper = styled.div`
+  width: 40px;
+  height: 40px;
+
+  color: ${theme.colors.sectionbgLighter};
+  cursor: pointer;
 `

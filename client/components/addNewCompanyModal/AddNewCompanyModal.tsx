@@ -6,10 +6,12 @@ import {
   GET_STAGES,
 } from '@client/graphql'
 import {FormProvider, useForm} from 'react-hook-form'
+import {ReactComponent as CloseIcon} from '@assets/close.svg'
 import {Button} from '../button/Button'
 import {useModal} from '../modal/Model.utils'
 import {
   Actions,
+  CloseIconWrapper,
   Content,
   Description,
   Header,
@@ -65,13 +67,20 @@ export function AddNewCompanyModal() {
   return (
     <Wrapper>
       <Header>
-        <Headline>Add new company</Headline>
+        <div>
+          <Headline>Add new company</Headline>
 
-        <Description>
-          Add new company by filling all the required fields, select from lists
-          and be carefull, because integer is limited and not everyone can
-          handle that
-        </Description>
+          <Description>
+            Add new company by filling all the required fields, select from
+            lists and be carefull, because integer is limited and not everyone
+            can handle that
+          </Description>
+        </div>
+        <div>
+          <CloseIconWrapper onClick={closeModal}>
+            <CloseIcon />
+          </CloseIconWrapper>
+        </div>
       </Header>
 
       <Content>
@@ -105,6 +114,7 @@ export function AddNewCompanyModal() {
                 type="number"
                 name="investmentSize"
                 label="Investment size"
+                placeholder="Enter amount"
                 suffix="EUR"
                 required
               />
