@@ -1,15 +1,15 @@
-import React, {createContext, useMemo} from 'react'
+import React, {createContext, PropsWithChildren, useMemo} from 'react'
 import {Modal} from './Modal'
-import {useModal, UseModalProps} from './Model.utils'
+import {useModalHandler, UseModalProps} from './Model.utils'
 
 export const ModalContext = createContext<UseModalProps>(undefined as never)
 
-export const ModalProvider: React.FC = ({children}) => {
-  const {openModal, content} = useModal()
+export function ModalProvider({children}: PropsWithChildren<unknown>) {
+  const {openModal, closeModal, content} = useModalHandler()
 
   const providerProps = useMemo(
-    () => ({openModal, content}),
-    [content, openModal]
+    () => ({openModal, closeModal, content}),
+    [closeModal, content, openModal]
   )
 
   return (

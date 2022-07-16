@@ -3,11 +3,11 @@ import {Bg, Content, Wrapper} from './Modal.styled'
 import {ModalContext} from './ModalContext'
 
 export function Modal() {
-  const {content} = useContext(ModalContext)
+  const {content, closeModal} = useContext(ModalContext)
 
   return (
     <Wrapper>
-      <Bg />
+      <Bg onClick={closeModal} />
       <Content>{content}</Content>
     </Wrapper>
   )

@@ -3,12 +3,15 @@ import {createGlobalStyle} from 'styled-components'
 const theme = {
   colors: {
     white: '#FFFFFF',
+    black: '#000000',
+    grey: '#AAAAAA',
     bg: '#141518',
     text: '#f1f4fa',
     sectionbg: 'rgba(255, 255, 255, 0.03)',
     sectionbgLight: 'rgba(255, 255, 255, 0.06)',
     sectionbgLightest: 'rgba(255, 255, 255, 0.02)',
     sectionbgMid: 'rgba(255, 255, 255, 0.05)',
+    sectionbgLighter: 'rgba(255, 255, 255, 0.2)',
     chart: [
       '#04C9C1',
       '#3D96FF',
@@ -20,6 +23,7 @@ const theme = {
       '#DBB7A0',
     ],
     cta: '#06AC72',
+    error: '#EF5681',
   },
   shadows: [
     '0px 4px 4px rgba(0, 0, 0, 0.25)',
@@ -29,11 +33,15 @@ const theme = {
 
 export const GlobalStyles = createGlobalStyle`
 
-@font-face {
-  font-family: 'Gotham';
-  src: url('Gotham-Font/GothamBold.ttf');
-  font-weight: 700;
-}
+  @font-face {
+    font-family: 'Gotham';
+    src: url('Gotham-Font/GothamBold.ttf');
+    font-weight: 700;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
 
   body {
     margin: 0;
@@ -55,21 +63,8 @@ export const GlobalStyles = createGlobalStyle`
     color: ${theme.colors.text};
   }
 
-  button {
-    font-family: 'Gotham';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-
-    color: ${theme.colors.white};
-
-    background: ${theme.colors.cta};
-    border-radius: 20px;
-    padding: 0 41px;
-    height: 40px;
-
-    cursor: pointer;
+  input::placeholder {
+    color: ${theme.colors.grey};
   }
 `
 

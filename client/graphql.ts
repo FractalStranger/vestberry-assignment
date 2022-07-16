@@ -20,6 +20,18 @@ export const GET_COMPANIES = gql`
   }
 `
 
+export const GET_SECTORS = gql`
+  query getSectors {
+    sectors
+  }
+`
+
+export const GET_STAGES = gql`
+  query getStages {
+    stages
+  }
+`
+
 export const ADD_COMPANY = gql`
   mutation addCompany(
     $name: String!

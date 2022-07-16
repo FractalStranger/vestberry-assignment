@@ -27,4 +27,9 @@ export const Content = styled.div`
   background: ${theme.colors.bg};
   box-shadow: ${theme.shadows[1]};
   border-radius: 20px;
+  overflow: auto;
+
+  position: absolute;
+
+  max-height: 90vh;
 `

@@ -1,8 +1,8 @@
 import {AddNewCompanyModal} from '@client/components/addNewCompanyModal/AddNewCompanyModal'
+import {Button} from '@client/components/button/Button'
 import {DataTable} from '@client/components/dataTable/DataTable'
-import {ModalContext} from '@client/components/modal/ModalContext'
+import {useModal} from '@client/components/modal/Model.utils'
 import {CompanyType} from '@client/graphql'
-import {useContext} from 'react'
 import {SWrapper} from './CompaniesOverview.styled'
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 }
 
 export function CompaniesOverview({companies}: Props) {
-  const {openModal} = useContext(ModalContext)
+  const {openModal} = useModal()
   const handleModal = () =>
     openModal({
       content: <AddNewCompanyModal />,
@@ -30,9 +30,9 @@ export function CompaniesOverview({companies}: Props) {
           ])}
           spacing={[20, 15, 15, 50]}
         />
-        <button type="button" onClick={handleModal}>
+        <Button type="button" onClick={handleModal}>
           Add new company
-        </button>
+        </Button>
       </SWrapper>
     </div>
   )
