@@ -7,17 +7,15 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
-  extends: [
-    'airbnb',
-    'airbnb/hooks',
-  ],
-  plugins: ['import'],
+  extends: ['airbnb', 'airbnb/hooks', 'prettier'],
+  plugins: ['import', 'prettier'],
   settings: {
     'import/resolver': {
       typescript: {},
     },
   },
   rules: {
+    'prettier/prettier': ['error'],
     semi: ['error', 'never'],
     'key-spacing': 'off',
     'jsx-quotes': [2, 'prefer-double'],
@@ -45,6 +43,5 @@ module.exports = {
     'no-shadow': 'warn',
     'consistent-return': 'off',
     'react/require-default-props': 'off',
-    z,
   },
 }
