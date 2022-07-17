@@ -92,6 +92,11 @@ export function AddNewCompanyModal() {
                 label="Company name"
                 placeholder="Company name"
                 required
+                validations={{
+                  stringLength: (val) =>
+                    val.length > 2 ||
+                    'Company name has to be longer then 2 characters',
+                }}
               />
 
               <SSelect

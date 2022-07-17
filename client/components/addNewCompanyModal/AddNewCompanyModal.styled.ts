@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
 export const Header = styled.div`
   background-color: ${theme.colors.sectionbg};
-  padding: 30px 40px;
+  padding: 30px 30px 30px 40px;
 
   display: flex;
   justify-content: space-between;

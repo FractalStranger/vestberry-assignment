@@ -20,7 +20,7 @@ export const Bg = styled.div`
   width: 100%;
   height: 100%;
 
-  background-color: ${theme.colors.sectionbgLightest};
+  background-color: ${theme.colors.bgDark};
 `
 
 export const Content = styled.div`

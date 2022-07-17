@@ -35,10 +35,7 @@ export const useModalHandler = (): UseModalProps => {
 }
 
 export const useModal = () => {
-  const {openModal, closeModal} = useContext(ModalContext)
+  const modal = useContext(ModalContext)
 
-  return {
-    openModal,
-    closeModal,
-  }
+  return modal
 }

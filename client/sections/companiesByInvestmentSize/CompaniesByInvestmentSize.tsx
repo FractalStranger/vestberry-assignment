@@ -6,6 +6,7 @@ import {
   SChart,
   SCompanyList,
   ScompanyListItem,
+  SCompanyListWrapper,
   SQuantity,
   SQuantityCompanies,
   SQuantityCount,
@@ -40,16 +41,18 @@ export function CompaniesByInvestmentSize({companies}: Props) {
               </SQuantity>
             </SChart>
 
-            <SCompanyList>
-              {companies?.map((company, i) => (
-                <ScompanyListItem
-                  key={company.id}
-                  color={theme.colors.chart[i] ?? getRandomColor()}
-                >
-                  {company.name}
-                </ScompanyListItem>
-              ))}
-            </SCompanyList>
+            <SCompanyListWrapper>
+              <SCompanyList>
+                {companies?.map((company, i) => (
+                  <ScompanyListItem
+                    key={company.id}
+                    color={theme.colors.chart[i] ?? getRandomColor()}
+                  >
+                    {company.name}
+                  </ScompanyListItem>
+                ))}
+              </SCompanyList>
+            </SCompanyListWrapper>
           </>
         ) : (
           <h3>There are no companies</h3>

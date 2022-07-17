@@ -42,6 +42,11 @@ export const SQuantityCompanies = styled.div`
   color: #aaaaaa;
 `
 
+export const SCompanyListWrapper = styled.div`
+  flex: 1;
+  position: relative;
+`
+
 export const SCompanyList = styled.div`
   display: flex;
   flex-direction: column;
@@ -49,6 +54,26 @@ export const SCompanyList = styled.div`
   gap: 10px 40px;
 
   max-height: 130px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:after {
+    content: '';
+    width: 30px;
+    height: 100%;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    background: linear-gradient(90deg, transparent, ${theme.colors.bgFogColor});
+  }
 `
 
 export const ScompanyListItem = styled.span<{

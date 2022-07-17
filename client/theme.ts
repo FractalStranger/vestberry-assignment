@@ -13,6 +13,8 @@ const theme = {
     sectionbgLightest: 'rgba(255, 255, 255, 0.02)',
     sectionbgMid: 'rgba(255, 255, 255, 0.05)',
     sectionbgLighter: 'rgba(255, 255, 255, 0.2)',
+    bgDark: 'rgba(0, 0, 0, 0.85)',
+    bgFogColor: '#1b1c1f',
     chart: [
       '#04C9C1',
       '#3D96FF',

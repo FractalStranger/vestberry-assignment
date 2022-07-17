@@ -4,7 +4,7 @@ import {
   TOO_LONG_NUMBER,
 } from '@client/constants/validation'
 import {ChangeEvent} from 'react'
-import {useController, useFormState} from 'react-hook-form'
+import {useController, useFormState, Validate} from 'react-hook-form'
 import {Label, SInput, Error, Suffix, InputWrapper} from './Input.styled'
 
 interface Props {
@@ -15,6 +15,7 @@ interface Props {
   className?: string
   placeholder?: string
   suffix?: string
+  validations?: Record<string, Validate<any>>
 }
 
 export function Input({
@@ -25,6 +26,7 @@ export function Input({
   className,
   placeholder,
   suffix,
+  validations,
 }: Props) {
   const {
     field: {value, onChange},
@@ -35,9 +37,10 @@ export function Input({
       validate: {
         isNumber: (val) =>
           type === 'number' ? val > 0 || NOT_A_NUMBER_ERROR_MESSAGE : true,
-        // GraphQL API doesn't want too long integers, whatever
+        // current GraphQL API want integer and integer is limited, should be float or BigNumber, but whatever
         numberTooLong: (val) =>
           type === 'number' ? val.length < 10 || TOO_LONG_NUMBER : true,
+        ...validations,
       },
     },
   })
