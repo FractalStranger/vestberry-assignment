@@ -21,6 +21,10 @@ const LoadingDiv = styled.div`
 
 const Section = styled.div`
   margin-bottom: 60px;
+
+  &:last-of-type {
+    margin-bottom: 120px;
+  }
 `
 
 export function Page() {
