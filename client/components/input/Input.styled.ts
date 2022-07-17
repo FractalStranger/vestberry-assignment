@@ -31,7 +31,7 @@ export const SInput = styled.input`
   font-weight: 400;
   font-size: 15px;
   line-height: 19px;
-  color: ${theme.colors.grey};
+  color: ${theme.colors.text};
 
   &:focus {
     outline: none;

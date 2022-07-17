@@ -10,7 +10,7 @@ export const Table = styled.table`
 `
 
 export const THead = styled.thead`
-  background: ${theme.colors.sectionbgMid};
+  background: ${theme.colors.sectionbgLighter};
 `
 export const THeadRow = styled.tr`
   height: 60px;

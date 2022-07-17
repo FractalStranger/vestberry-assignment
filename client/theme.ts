@@ -10,9 +10,9 @@ const theme = {
     text: '#f1f4fa',
     sectionbg: 'rgba(255, 255, 255, 0.03)',
     sectionbgLight: 'rgba(255, 255, 255, 0.06)',
+    sectionbgLighter: 'rgba(255, 255, 255, 0.05)',
     sectionbgLightest: 'rgba(255, 255, 255, 0.02)',
-    sectionbgMid: 'rgba(255, 255, 255, 0.05)',
-    sectionbgLighter: 'rgba(255, 255, 255, 0.2)',
+    sectionbgMid: 'rgba(255, 255, 255, 0.2)',
     bgDark: 'rgba(0, 0, 0, 0.85)',
     bgFogColor: '#1b1c1f',
     chart: [

@@ -33,7 +33,12 @@ export function Select({
     <div className={className}>
       <Label>{label}</Label>
       <Wrapper>
-        <SSelect value={value} onChange={onChange} defaultValue="">
+        <SSelect
+          value={value}
+          onChange={onChange}
+          defaultValue=""
+          required={required}
+        >
           {placeholder && (
             <option value="" disabled>
               {placeholder}

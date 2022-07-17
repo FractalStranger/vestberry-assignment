@@ -11,7 +11,7 @@ export const IconWrapper = styled.div`
   position: absolute;
   right: 12px;
   width: 15px;
-  color: ${theme.colors.sectionbgLighter};
+  color: ${theme.colors.sectionbgMid};
 `
 
 export const Label = styled.div`
@@ -34,11 +34,15 @@ export const SSelect = styled.select`
   font-weight: 400;
   font-size: 15px;
   line-height: 19px;
-  color: ${theme.colors.grey};
+  color: ${theme.colors.text};
 
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+
+  &:invalid {
+    color: ${theme.colors.grey};
+  }
 
   option {
     color: ${theme.colors.black};
