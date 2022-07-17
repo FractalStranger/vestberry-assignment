@@ -1,5 +1,6 @@
 import {CompanyType} from '@client/graphql'
 import theme from '@client/theme'
+import {getRandomColor} from '@client/utils/randomColor'
 import {PieChart} from 'react-minimal-pie-chart'
 import {
   SChart,
@@ -19,7 +20,7 @@ export function CompaniesByInvestmentSize({companies}: Props) {
   const data = companies?.map((company, i) => ({
     title: company.name,
     value: company.investmentSize,
-    color: theme.colors.chart[i],
+    color: theme.colors.chart[i] ?? getRandomColor(),
   }))
   return (
     <div>
@@ -43,7 +44,7 @@ export function CompaniesByInvestmentSize({companies}: Props) {
               {companies?.map((company, i) => (
                 <ScompanyListItem
                   key={company.id}
-                  color={theme.colors.chart[i]}
+                  color={theme.colors.chart[i] ?? getRandomColor()}
                 >
                   {company.name}
                 </ScompanyListItem>

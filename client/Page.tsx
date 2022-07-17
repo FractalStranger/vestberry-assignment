@@ -1,6 +1,11 @@
 import {useQuery} from '@apollo/client'
 import styled from 'styled-components'
-import {GET_COMPANIES, CompanyType} from '@client/graphql'
+import {
+  GET_COMPANIES,
+  CompanyType,
+  GET_SECTORS,
+  GET_STAGES,
+} from '@client/graphql'
 import {CompaniesBySector} from './sections/companiesBySector/CompaniesBySector'
 import {CompaniesByInvestmentSize} from './sections/companiesByInvestmentSize/CompaniesByInvestmentSize'
 import {CompaniesOverview} from './sections/companiesOverview/CompaniesOverview'
@@ -19,9 +24,22 @@ const Section = styled.div`
 `
 
 export function Page() {
-  const {loading, error, data} = useQuery<{companies: CompanyType[]}>(
-    GET_COMPANIES
-  )
+  const {
+    loading: loadingCompanies,
+    error: errorCompanies,
+    data,
+  } = useQuery<{companies: CompanyType[]}>(GET_COMPANIES)
+
+  const {loading: loadingSectors, error: errorSectors} = useQuery<{
+    sectors: string[]
+  }>(GET_SECTORS)
+
+  const {loading: loadingStages, error: errorStages} = useQuery<{
+    stages: string[]
+  }>(GET_STAGES)
+
+  const loading = loadingCompanies || loadingSectors || loadingStages
+  const error = errorCompanies || errorSectors || errorStages
 
   if (loading) {
     return <LoadingDiv>Loading data...</LoadingDiv>
