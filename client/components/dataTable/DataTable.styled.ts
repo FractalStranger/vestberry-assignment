@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const Table = styled.table`
   border-spacing: 0;
   width: 100%;
-  outline: 2px solid #18191c;
+  outline: 2px solid ${theme.colors.outline};
   border-radius: 10px;
   overflow: hidden;
 `
