@@ -6,7 +6,6 @@ interface OpenModalProps {
 }
 
 export interface UseModalProps {
-  // eslint-disable-next-line no-unused-vars
   openModal: (props: OpenModalProps) => void
   closeModal: () => void
   content: ReactNode

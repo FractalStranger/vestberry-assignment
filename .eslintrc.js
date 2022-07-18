@@ -8,7 +8,7 @@ module.exports = {
     project: './tsconfig.json',
   },
   extends: ['airbnb', 'airbnb/hooks', 'prettier'],
-  plugins: ['import', 'prettier'],
+  plugins: ['import', 'prettier', '@typescript-eslint'],
   settings: {
     'import/resolver': {
       typescript: {},
@@ -43,5 +43,6 @@ module.exports = {
     'no-shadow': 'warn',
     'consistent-return': 'off',
     'react/require-default-props': 'off',
+    '@typescript-eslint/no-unused-vars': ['error'],
   },
 }
